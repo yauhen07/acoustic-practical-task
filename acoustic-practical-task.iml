@@ -6,6 +6,7 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/test/resources" type="java-test-resource" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
@@ -531,7 +532,6 @@
     <orderEntry type="library" scope="TEST" name="Maven: com.squareup.okhttp3:okhttp:3.11.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: com.squareup.okio:okio:1.14.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: io.github.bonigarcia:webdrivermanager:3.8.1" level="project" />
-    <orderEntry type="library" name="Maven: commons-io:commons-io:2.6" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: com.google.code.gson:gson:2.8.5" level="project" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-lang3:3.8.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.apache.httpcomponents:httpclient:4.5.6" level="project" />
@@ -571,6 +571,7 @@
     <orderEntry type="library" name="Maven: net.lightbody.bmp:browsermob-core:2.1.5" level="project" />
     <orderEntry type="library" name="Maven: net.lightbody.bmp:littleproxy:1.1.0-beta-bmp-17" level="project" />
     <orderEntry type="library" name="Maven: net.lightbody.bmp:mitm:2.1.5" level="project" />
+    <orderEntry type="library" name="Maven: commons-io:commons-io:2.4" level="project" />
     <orderEntry type="library" name="Maven: io.qameta.allure:allure-testng:2.6.0" level="project" />
     <orderEntry type="library" name="Maven: io.qameta.allure:allure-descriptions-javadoc:2.6.0" level="project" />
     <orderEntry type="library" name="Maven: io.qameta.allure:allure-java-commons:2.6.0" level="project" />
@@ -581,5 +582,7 @@
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.module:jackson-module-jaxb-annotations:2.7.0" level="project" />
     <orderEntry type="library" name="Maven: org.aspectj:aspectjrt:1.8.10" level="project" />
     <orderEntry type="library" name="Maven: org.jooq:joor:0.9.6" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.9.8" level="project" />
+    <orderEntry type="library" name="Maven: org.yaml:snakeyaml:1.23" level="project" />
   </component>
 </module>

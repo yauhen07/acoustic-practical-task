@@ -10,5 +10,4 @@ public class Bup
     }
 
     public static BrowserUpProxyServer proxyServer = null;
-
 }

@@ -1,42 +1,47 @@
 package com.mycompany.tests;
 
-import com.browserup.bup.BrowserUpProxyServer;
-import com.browserup.bup.proxy.CaptureType;
 import com.browserup.harreader.model.Har;
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.mycompany.configs.Bup;
+import com.mycompany.driver.DriverConfiguration;
+import com.mycompany.utils.ResourceUtils;
+import com.mycompany.utils.ScreenshotsListener;
 
-import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Listeners;
 
-import java.io.File;
+@Listeners(value = ScreenshotsListener.class)
 
 public abstract class BaseTest
 {
-    protected static final String BASE_URL = "https://pass.rw.by/";
+    protected Har har;
+
+    @BeforeSuite
+    public void globalConfiguration()
+    {
+        DriverConfiguration driverConfiguration = ResourceUtils.getConfigFromFile();
+        Configuration.browser = driverConfiguration.browserType;
+        Configuration.baseUrl = driverConfiguration.hubUrl;
+        Configuration.browserSize = driverConfiguration.windowWidth + "x" + driverConfiguration.windowHeight;
+        Configuration.browserVersion = driverConfiguration.chromeVersion;
+        Configuration.timeout = driverConfiguration.timeoutSeconds;
+    }
 
     @BeforeClass
     public void con()
     {
         Selenide.clearBrowserCookies();
-
-        System.setProperty("selenide.browser", "com.mycompany.configs.BupChrome");
-//        Har har = null;
-//        Bup.proxyServer = new BrowserUpProxyServer();
-//        Bup.proxyServer.start();
-//        Bup.proxyServer.setHarCaptureTypes(CaptureType.getAllContentCaptureTypes());
-//        har = Bup.proxyServer.getHar();
-//        har.toString();
-
-
-
-
     }
 
-    @AfterClass
-    public void waitTo()
+    @AfterTest
+    private void stopProxyServer()
     {
-
+        if (Bup.proxyServer.isStarted())
+        {
+            Bup.proxyServer.stop();
+        }
     }
-
 }

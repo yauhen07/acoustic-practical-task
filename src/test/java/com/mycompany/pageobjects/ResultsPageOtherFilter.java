@@ -1,6 +1,6 @@
-package com.mycompany.enums;
+package com.mycompany.pageobjects;
 
-public enum OtherFilter
+public enum ResultsPageOtherFilter
 {
     WITH_FREE_SITS("С наличием свободных мест", "//span[@data-filter-value = 'w_places']"),
     E_REGISTRATION("Электронная регистрация", "//span[@data-filter-value = 'eregistration']"),
@@ -9,7 +9,7 @@ public enum OtherFilter
     public String ruName;
     private String otherFilterLocator;
 
-    OtherFilter(String ruName, String otherFilterLocator)
+    ResultsPageOtherFilter(String ruName, String otherFilterLocator)
     {
         this.ruName = ruName;
         this.otherFilterLocator = otherFilterLocator;

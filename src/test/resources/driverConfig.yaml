@@ -1,0 +1,8 @@
+driverExecutionType: LOCAL
+browserType: CHROME
+hubUrl: http://localhost:4444/wd/hub
+windowWidth: 1920
+windowHeight: 1080
+chromeVersion: 80
+#selenide
+timeoutSeconds: 10

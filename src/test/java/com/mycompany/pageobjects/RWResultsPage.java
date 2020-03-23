@@ -1,9 +1,7 @@
 package com.mycompany.pageobjects;
 
 import com.codeborne.selenide.CollectionCondition;
-import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.SelenideElement;
-import com.mycompany.enums.OtherFilter;
+import com.codeborne.selenide.ElementsCollection;
 
 import org.openqa.selenium.By;
 
@@ -12,7 +10,8 @@ import io.qameta.allure.Step;
 import static com.codeborne.selenide.Condition.exist;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
-import static org.testng.Assert.assertEquals;
+import static com.codeborne.selenide.Selenide.$x;
+import static org.testng.Assert.assertFalse;
 
 public class RWResultsPage extends AbstractPage
 {
@@ -28,16 +27,14 @@ public class RWResultsPage extends AbstractPage
         $(RADIO_BUTTON_DIRECTIONS).should(exist);
     }
 
-    @Step("Verify '{otherFilter.ruName}' filter working correctly")
-    public void otherFilterResultsVerify(OtherFilter otherFilter)
+    public void filterResultsUsingOtherFilter(ResultsPageOtherFilter resultsPageOtherFilter)
     {
-        $(By.xpath(otherFilter.getOtherFilterLocator())).click();
-        for (SelenideElement element : $$(LIST_OF_TRAINS_FILTERED_BY_OTHER))
-        {
-            element.shouldHave(Condition.not(Condition.attribute("class", "hidden")));
+        $x(resultsPageOtherFilter.getOtherFilterLocator()).click();
+    }
 
-            assertEquals(element.getAttribute("class").endsWith("hidden"), false);
-        }
+    public ElementsCollection collectListofTrainsFilteredByOther()
+    {
+        return $$(LIST_OF_TRAINS_FILTERED_BY_OTHER);
     }
 
     @Step("Verify '{expectedCountOfDateFilters}' date filters above trains schedule")
