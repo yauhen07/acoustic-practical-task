@@ -1,8 +1,8 @@
 driverExecutionType: LOCAL
-browserType: CHROME
+browserType: com.mycompany.configs.BupChrome
 hubUrl: http://localhost:4444/wd/hub
 windowWidth: 1920
 windowHeight: 1080
 chromeVersion: 80
 #selenide
-timeoutSeconds: 10
+timeoutSeconds: 10000

@@ -1,6 +1,5 @@
 package com.mycompany.tests;
 
-import com.browserup.harreader.model.Har;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.mycompany.configs.Bup;
@@ -17,23 +16,15 @@ import org.testng.annotations.Listeners;
 
 public abstract class BaseTest
 {
-    protected Har har;
-
     @BeforeSuite
     public void globalConfiguration()
     {
-        DriverConfiguration driverConfiguration = ResourceUtils.getConfigFromFile();
-        Configuration.browser = driverConfiguration.browserType;
-        Configuration.baseUrl = driverConfiguration.hubUrl;
-        Configuration.browserSize = driverConfiguration.windowWidth + "x" + driverConfiguration.windowHeight;
-        Configuration.browserVersion = driverConfiguration.chromeVersion;
-        Configuration.timeout = driverConfiguration.timeoutSeconds;
-    }
-
-    @BeforeClass
-    public void con()
-    {
-        Selenide.clearBrowserCookies();
+                DriverConfiguration driverConfiguration = ResourceUtils.getConfigFromFile();
+                Configuration.browser = driverConfiguration.browserType;
+                Configuration.baseUrl = driverConfiguration.hubUrl;
+                Configuration.browserSize = driverConfiguration.windowWidth + "x" + driverConfiguration.windowHeight;
+                Configuration.browserVersion = driverConfiguration.chromeVersion;
+                Configuration.timeout = driverConfiguration.timeoutSeconds;
     }
 
     @AfterTest

@@ -9,24 +9,27 @@ import java.util.stream.Collectors;
 
 import io.qameta.allure.Step;
 
+import static org.testng.Assert.assertTrue;
+
 public class BupUtils
 {
-    public static Har getHarFor(String url)
+    public static void initProxyFor(String url)
     {
+        Har har = null;
         Bup.proxyServer = new BrowserUpProxyServer();
         Bup.proxyServer.start();
         Bup.proxyServer.setHarCaptureTypes(CaptureType.getAllContentCaptureTypes());
         Bup.proxyServer.newHar(url);
-        return Bup.proxyServer.getHar();
     }
 
     @Step("Verify count of loaded .png files id more than '{png}'")
-    public static boolean verifyLoadedPngMoreThan(Har har, int png)
+    public static void verifyLoadedPngMoreThan(Har har, int png)
     {
-        har = Bup.proxyServer.getHar();
-        return ((har.getLog().getEntries().stream()
+        assertTrue(har.getLog().getEntries().stream()
             .filter(p -> p.getResponse()
-                .getContent().getMimeType().contains("png"))
-            .collect(Collectors.toList())).size() >= png);
+                .getContent()
+                .getMimeType()
+                .contains("png"))
+            .collect(Collectors.toList()).size() > png, "Nunmer of loaded .png on Results page is less than '" + png + "'");
     }
 }

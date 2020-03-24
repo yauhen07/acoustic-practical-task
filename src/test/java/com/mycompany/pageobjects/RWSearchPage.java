@@ -13,11 +13,11 @@ import static com.codeborne.selenide.Selenide.page;
 public class RWSearchPage extends AbstractPage
 {
     public static final String SEARCH_URL = "https://pass.rw.by/";
-    private static final By FROM_STATION_FIELD = By.id("one-way-raspFormFromTitle");
-    private static final By TO_STATION_FIELD = By.id("one-way-raspFormToTitle");
-    private static final By DATE_FIELD = By.xpath("//div[@class='collapse in']//div[@class='tab-pane fade in "
+    private final By FROM_STATION_FIELD = By.id("one-way-raspFormFromTitle");
+    private final By TO_STATION_FIELD = By.id("one-way-raspFormToTitle");
+    private final By DATE_FIELD = By.xpath("//div[@class='collapse in']//div[@class='tab-pane fade in "
         + "active']//div[@class='rasp-form__inp input-group date']");
-    private static final By SUBMIT_BUTTON = By.xpath("//div[@class='collapse in']//div[@class='tab-pane fade in "
+    private final By SUBMIT_BUTTON = By.xpath("//div[@class='collapse in']//div[@class='tab-pane fade in "
         + "active']//button[@class='btn btn-default "
         + "btn-submit js-input-taber']");
 
