@@ -43,16 +43,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c64d54cf-a9ac-4bc6-8dd5-cc61518c8369" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/acoustic-practical-task.iws" beforeDir="false" afterPath="$PROJECT_DIR$/acoustic-practical-task.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/mycompany/pageobjects/RWResultsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mycompany/pageobjects/RWResultsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/mycompany/pageobjects/RWSearchPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mycompany/pageobjects/RWSearchPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/mycompany/pageobjects/ResultsPageOtherFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mycompany/pageobjects/ResultsPageOtherFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/mycompany/services/RWResultsOperations.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/mycompany/services/RWSearchOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mycompany/services/RWOperations.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/mycompany/tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mycompany/tests/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/mycompany/tests/VerifySearchResultsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mycompany/tests/VerifySearchResultsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/mycompany/utils/BupUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mycompany/utils/BupUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/driverConfig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/driverConfig.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/mycompany/services/RWOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/mycompany/services/RWOperations.java" afterDir="false" />
     </list>
     <list id="5613d304-bc01-4a4c-8e2f-0243babb79a3" name="Revert: Target" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -221,24 +212,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/mycompany/tests/VerifySearchResultsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="39" column="53" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="53" />
+            <state relative-caret-position="22">
+              <caret line="25" column="31" lean-forward="true" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
               <folding>
                 <element signature="e#836#837#0" expanded="true" />
                 <element signature="e#890#891#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/resources/driverConfig.yaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="5" column="17" lean-forward="true" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -316,10 +298,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/mycompany/pageobjects/AbstractPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="40">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/mycompany/services/RWOperations.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="61" column="24" lean-forward="true" selection-start-line="61" selection-start-column="24" selection-end-line="61" selection-end-column="24" />
+            <state relative-caret-position="20">
+              <caret line="52" column="57" selection-start-line="52" selection-start-column="57" selection-end-line="52" selection-end-column="57" />
               <folding>
                 <element signature="e#438#439#0" expanded="true" />
                 <element signature="e#518#519#0" expanded="true" />
@@ -331,7 +322,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/mycompany/tests/BaseTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
+            <state relative-caret-position="240">
               <caret line="22" selection-start-line="22" selection-end-line="22" />
             </state>
           </provider>
@@ -396,9 +387,9 @@
         <option value="$PROJECT_DIR$/src/test/java/com/mycompany/utils/BupUtils.java" />
         <option value="$PROJECT_DIR$/src/test/resources/driverConfig.yaml" />
         <option value="$PROJECT_DIR$/src/test/java/com/mycompany/tests/BaseTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/mycompany/services/RWOperations.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/mycompany/pageobjects/RWResultsPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/mycompany/tests/VerifySearchResultsTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/mycompany/services/RWOperations.java" />
       </list>
     </option>
   </component>
@@ -1083,14 +1074,14 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32918397" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.47164592" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.61134166" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.34578148" />
       <window_info anchor="bottom" id="EJB" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32918397" />
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
       <window_info anchor="bottom" id="CVS" order="8" />
       <window_info anchor="bottom" id="Messages" order="9" weight="0.32918397" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.41355464" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.41355464" />
       <window_info anchor="bottom" id="Educational.CheckDetails" order="11" />
       <window_info anchor="bottom" id="CheckStyle" order="12" />
       <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
@@ -1205,7 +1196,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/com/mycompany/services/RWOperations.java</url>
-          <line>60</line>
+          <line>61</line>
           <properties />
           <option name="timeStamp" value="80" />
         </line-breakpoint>
@@ -1285,11 +1276,6 @@
       </expression>
       <expression>
         <expression-string>$$x(&quot;//div[@class = 'sch-table__duration train-duration-time']|div[@data-value]&quot;);</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>$$(LIST_OF_ALL_DISPLAYED_TRAINS_DURATION).get(0).getValue();</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
       </expression>
@@ -1463,13 +1449,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/mycompany/pageobjects/AbstractPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build/reports/tests/337604592572271.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -1550,13 +1529,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/mycompany/tests/BaseTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/mycompany/utils/BupUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="81">
@@ -1607,24 +1579,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/mycompany/services/RWOperations.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/mycompany/tests/VerifySearchResultsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="61" column="24" lean-forward="true" selection-start-line="61" selection-start-column="24" selection-end-line="61" selection-end-column="24" />
+        <state relative-caret-position="22">
+          <caret line="25" column="31" lean-forward="true" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
           <folding>
-            <element signature="e#438#439#0" expanded="true" />
-            <element signature="e#518#519#0" expanded="true" />
+            <element signature="e#836#837#0" expanded="true" />
+            <element signature="e#890#891#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/mycompany/tests/VerifySearchResultsTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/mycompany/pageobjects/AbstractPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="39" column="53" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="53" />
+        <state relative-caret-position="40">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/mycompany/tests/BaseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/mycompany/services/RWOperations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="52" column="57" selection-start-line="52" selection-start-column="57" selection-end-line="52" selection-end-column="57" />
           <folding>
-            <element signature="e#836#837#0" expanded="true" />
-            <element signature="e#890#891#0" expanded="true" />
+            <element signature="e#438#439#0" expanded="true" />
+            <element signature="e#518#519#0" expanded="true" />
           </folding>
         </state>
       </provider>

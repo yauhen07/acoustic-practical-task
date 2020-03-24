@@ -50,6 +50,7 @@ public class RWOperations
         }
     }
 
+    @Step("Collect all displayed trains in 'List<Trains>'")
     public List<Train> collectTrainsToList()
     {
         List<Train> listOfTrainsOnResultsPage = new ArrayList<>();
