@@ -12,4 +12,19 @@ public class Train
         this.departureTime = departureTime;
         this.inWayTimeMinutes = inWayTimeMinutes;
     }
+
+    public String getTrainName()
+    {
+        return trainName;
+    }
+
+    public String getDepartureTime()
+    {
+        return departureTime;
+    }
+
+    public String getInWayTimeMinutes()
+    {
+        return inWayTimeMinutes;
+    }
 }

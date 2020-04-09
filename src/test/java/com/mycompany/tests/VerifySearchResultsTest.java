@@ -36,11 +36,11 @@ public class VerifySearchResultsTest extends BaseTest
         rwOperations = new RWOperations();
         rwOperations.openSearchPage();
         rwOperations.search(FROM_STATION, TO_STATION, DATE);
-        rwOperations.rwResultsPage.radioButtonDefault();
+        rwOperations.rwResultsPage.rwResultsRouteSelectorPage.radioButtonDefault();
         rwOperations.collectTrainsToList();
         rwOperations.verifyOtherFilterResults(ResultsPageOtherFilter.E_REGISTRATION);
-        Har har = Bup.proxyServer.getHar();
-        BupUtils.verifyLoadedPngMoreThan(har, NUMBER_OF_LOADED_PNG);
+//        Har har = Bup.proxyServer.getHar();
+//        BupUtils.verifyLoadedPngMoreThan(har, NUMBER_OF_LOADED_PNG);
         rwOperations.rwResultsPage.countDateFilters(COUNT_DATE_FILTERS);
     }
 }

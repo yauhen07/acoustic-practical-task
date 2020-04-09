@@ -9,7 +9,29 @@ import java.io.IOException;
 
 public class ResourceUtils
 {
-    public static DriverConfiguration getConfigFromFile()
+    private static final String BROWSER_TYPE_SYSTEM_PROPERTY = "test.driver.browser.type";
+    private static final String DRIVER_EXECUTION_SYSTEM_PROPERTY = "test.driver.execution";
+
+    public static DriverConfiguration getConfiguration()
+    {
+        DriverConfiguration driverConfiguration = getConfigFromFile();
+        if (getSystemProp(BROWSER_TYPE_SYSTEM_PROPERTY) != null)
+        {
+            driverConfiguration.setBrowserType(getSystemProp(BROWSER_TYPE_SYSTEM_PROPERTY).toUpperCase());
+        }
+        if (getSystemProp(DRIVER_EXECUTION_SYSTEM_PROPERTY) != null)
+        {
+            driverConfiguration.setDriverExecutionType(getSystemProp(DRIVER_EXECUTION_SYSTEM_PROPERTY).toUpperCase());
+        }
+        return driverConfiguration;
+    }
+
+    private static String getSystemProp(String name)
+    {
+        return System.getProperty(name);
+    }
+
+    private static DriverConfiguration getConfigFromFile()
     {
         ObjectMapper mapper = new ObjectMapper(new YAMLFactory());
         mapper.findAndRegisterModules();
@@ -18,7 +40,6 @@ public class ResourceUtils
         {
             driverConfiguration = mapper.readValue(new File("src/test/resources/driverConfig.yaml"),
                 DriverConfiguration.class);
-
         }
         catch (IOException e)
         {

@@ -2,13 +2,13 @@ package com.mycompany.driver;
 
 public class DriverConfiguration
 {
-    public String driverExecutionType;
-    public String browserType;
-    public String hubUrl;
-    public String windowWidth;
-    public String windowHeight;
-    public String chromeVersion;
-    public int timeoutSeconds;
+    private String driverExecutionType;
+    private String browserType;
+    private String hubUrl;
+    private String windowWidth;
+    private String windowHeight;
+    private String chromeVersion;
+    private int timeoutSeconds;
 
     public String getDriverExecutionType()
     {

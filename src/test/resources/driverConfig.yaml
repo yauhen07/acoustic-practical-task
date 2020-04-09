@@ -1,6 +1,6 @@
 driverExecutionType: LOCAL
-browserType: com.mycompany.configs.BupChrome
-hubUrl: http://localhost:4444/wd/hub
+browserType: CHROME
+hubUrl:  http://192.168.1.7:5558/wd/hub
 windowWidth: 1920
 windowHeight: 1080
 chromeVersion: 80
