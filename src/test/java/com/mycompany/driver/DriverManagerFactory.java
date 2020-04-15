@@ -2,23 +2,27 @@ package com.mycompany.driver;
 
 public class DriverManagerFactory
 {
-    public static void driverManager(DriverConfiguration driverConfiguration)
+    public static DefaultDriverFactory driverManager(DriverConfiguration driverConfiguration)
     {
-        if (driverConfiguration.getDriverExecutionType().equals("REMOTE"))
+        DefaultDriverFactory defaultDriverFactory;
+        if (driverConfiguration.getDriverExecutionType().equals(DriverExecutionType.REMOTE.getExecutionType()))
         {
-            new RemoteDriverFactory().configureDriver(driverConfiguration.getBrowserType());
+            return new RemoteDriverFactory();
         }
         else
         {
             switch (driverConfiguration.getBrowserType())
             {
                 case "CHROME":
-                    new ChromeDriverManager().configureDriver();
+                    defaultDriverFactory = new ChromeDriverFactory();
                     break;
                 case "FIREFOX":
-                    new FirefoxDriverManager().configureDriver();
+                    defaultDriverFactory = new FirefoxDriverFactory();
                     break;
+                default:
+                    defaultDriverFactory = new ChromeDriverFactory();
             }
         }
+        return defaultDriverFactory;
     }
 }

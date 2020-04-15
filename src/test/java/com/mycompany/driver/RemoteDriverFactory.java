@@ -3,22 +3,25 @@ package com.mycompany.driver;
 import com.codeborne.selenide.Configuration;
 import com.mycompany.utils.StartGrid;
 
-public class RemoteDriverFactory extends DefaultDriverManager
+public class RemoteDriverFactory extends DefaultDriverFactory
 {
 
-    public void configureDriver(String browserType)
+    public void configureDriver(DriverConfiguration driverConfiguration)
     {
+        DefaultDriverFactory defaultDriverFactory;
         StartGrid.startGrid();
-        Configuration.remote = defaultDriverConfiguration().getHubUrl();
+        Configuration.remote = driverConfiguration.getHubUrl();
 
-        switch (browserType)
+        switch (driverConfiguration.getBrowserType())
         {
             case "CHROME":
-                new ChromeDriverManager().configureDriver();
+                defaultDriverFactory = new ChromeDriverFactory();
                 break;
             case "FIREFOX":
-                new FirefoxDriverManager().configureDriver();
+                defaultDriverFactory = new FirefoxDriverFactory();
                 break;
+            default:
+                defaultDriverFactory = new ChromeDriverFactory();
         }
     }
 }

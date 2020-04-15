@@ -2,7 +2,6 @@ package com.mycompany.configs;
 
 import com.browserup.bup.client.ClientUtil;
 import com.codeborne.selenide.WebDriverProvider;
-import com.mycompany.driver.ChromeDriverManager;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

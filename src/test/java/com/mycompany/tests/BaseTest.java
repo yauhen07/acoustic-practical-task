@@ -1,6 +1,7 @@
 package com.mycompany.tests;
 
 import com.mycompany.configs.Bup;
+import com.mycompany.driver.DefaultDriverFactory;
 import com.mycompany.driver.DriverManagerFactory;
 import com.mycompany.utils.ResourceUtils;
 import com.mycompany.utils.ScreenshotsListener;
@@ -16,7 +17,8 @@ public abstract class BaseTest
     @BeforeSuite
     public void globalConfiguration()
     {
-        new DriverManagerFactory().driverManager(ResourceUtils.getConfiguration());
+        DefaultDriverFactory driverConfiguration = new DriverManagerFactory().driverManager(ResourceUtils.getConfiguration());
+        driverConfiguration.configureDriver(ResourceUtils.getConfiguration());
     }
 
     @AfterTest

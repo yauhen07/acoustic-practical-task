@@ -1,7 +1,5 @@
 package com.mycompany.tests;
 
-import com.browserup.harreader.model.Har;
-import com.mycompany.configs.Bup;
 import com.mycompany.pageobjects.ResultsPageOtherFilter;
 import com.mycompany.services.RWOperations;
 import com.mycompany.utils.BupUtils;
@@ -39,8 +37,8 @@ public class VerifySearchResultsTest extends BaseTest
         rwOperations.rwResultsPage.rwResultsRouteSelectorPage.radioButtonDefault();
         rwOperations.collectTrainsToList();
         rwOperations.verifyOtherFilterResults(ResultsPageOtherFilter.E_REGISTRATION);
-//        Har har = Bup.proxyServer.getHar();
-//        BupUtils.verifyLoadedPngMoreThan(har, NUMBER_OF_LOADED_PNG);
+        //        Har har = Bup.proxyServer.getHar();
+        //        BupUtils.verifyLoadedPngMoreThan(har, NUMBER_OF_LOADED_PNG);
         rwOperations.rwResultsPage.countDateFilters(COUNT_DATE_FILTERS);
     }
 }

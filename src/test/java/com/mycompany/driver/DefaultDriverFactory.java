@@ -1,15 +1,14 @@
 package com.mycompany.driver;
 
 import com.codeborne.selenide.Configuration;
-import com.mycompany.utils.ResourceUtils;
 
-public class DefaultDriverManager
+public abstract class DefaultDriverFactory
 {
-    protected DriverConfiguration defaultDriverConfiguration()
+    public abstract void configureDriver(DriverConfiguration driverConfiguration);
+
+    protected void defaultDriverConfiguration(DriverConfiguration driverConfiguration)
     {
-        DriverConfiguration driverConfiguration = ResourceUtils.getConfiguration();
         Configuration.browserSize = driverConfiguration.getWindowWidth() + "x" + driverConfiguration.getWindowHeight();
         Configuration.timeout = driverConfiguration.getTimeoutSeconds();
-        return driverConfiguration;
     }
 }

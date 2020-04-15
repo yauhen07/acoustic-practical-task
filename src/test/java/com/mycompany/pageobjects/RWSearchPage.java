@@ -4,11 +4,8 @@ import org.openqa.selenium.By;
 
 import java.util.Calendar;
 
-import io.qameta.allure.Step;
-
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$x;
-import static com.codeborne.selenide.Selenide.page;
 
 public class RWSearchPage extends AbstractPage
 {
@@ -52,4 +49,3 @@ public class RWSearchPage extends AbstractPage
             "']/a[text() = '" + calendar.get(5) + "']";
     }
 }
-
