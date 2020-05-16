@@ -15,7 +15,7 @@ public class VerifySearchResultsTest extends BaseTest
 {
     private final String FROM_STATION = "Минск-Пассажирский";
     private final String TO_STATION = "Молодечно";
-    private final GregorianCalendar DATE = new GregorianCalendar(2020, Calendar.APRIL, 16);
+    private final GregorianCalendar DATE = new GregorianCalendar(2020, Calendar.MAY, 25);
     private final int COUNT_DATE_FILTERS = 4;
     private final int NUMBER_OF_LOADED_PNG = 5;
     private RWOperations rwOperations;

@@ -4,10 +4,16 @@ import com.codeborne.selenide.Configuration;
 
 public class ChromeDriverFactory extends DefaultDriverFactory
 {
-    public void configureDriver(DriverConfiguration driverConfiguration)
+    public ChromeDriverFactory(DriverConfiguration driverConfiguration)
     {
-        defaultDriverConfiguration(driverConfiguration);
-        Configuration.browser = driverConfiguration.getBrowserType().toLowerCase();
+        super(driverConfiguration);
+    }
+
+    @Override
+    public void configureDriver()
+    {
+        defaultDriverConfiguration();
+        Configuration.browser = BrowserType.CHROME.getBrowserType().toLowerCase();
         Configuration.browserVersion = driverConfiguration.getChromeVersion();
     }
 }

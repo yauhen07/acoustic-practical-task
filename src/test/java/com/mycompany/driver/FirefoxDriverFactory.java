@@ -4,10 +4,16 @@ import com.codeborne.selenide.Configuration;
 
 public class FirefoxDriverFactory extends DefaultDriverFactory
 {
-    public void configureDriver(DriverConfiguration driverConfiguration)
+    public FirefoxDriverFactory(DriverConfiguration driverConfiguration)
     {
-        defaultDriverConfiguration(driverConfiguration);
-        Configuration.browser = driverConfiguration.getBrowserType().toLowerCase();
+        super(driverConfiguration);
+    }
+
+    @Override
+    public void configureDriver()
+    {
+        defaultDriverConfiguration();
+        Configuration.browser = BrowserType.FIREFOX.getBrowserType().toLowerCase();
         Configuration.browserVersion = driverConfiguration.getChromeVersion();
     }
 }

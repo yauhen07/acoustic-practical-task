@@ -3,6 +3,7 @@ package com.mycompany.utils;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 import com.mycompany.driver.DriverConfiguration;
+import com.mycompany.driver.DriverExecutionType;
 
 import java.io.File;
 import java.io.IOException;
@@ -21,7 +22,7 @@ public class ResourceUtils
         }
         if (getSystemProp(DRIVER_EXECUTION_SYSTEM_PROPERTY) != null)
         {
-            driverConfiguration.setDriverExecutionType(getSystemProp(DRIVER_EXECUTION_SYSTEM_PROPERTY).toUpperCase());
+            driverConfiguration.setDriverExecutionType(DriverExecutionType.valueOf(getSystemProp(DRIVER_EXECUTION_SYSTEM_PROPERTY).toUpperCase()));
         }
         return driverConfiguration;
     }

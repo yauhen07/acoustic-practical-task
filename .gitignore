@@ -5,3 +5,4 @@ logs
 allure-results
 .allure
 build
+plan.txt
