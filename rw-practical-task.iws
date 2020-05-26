@@ -3,7 +3,7 @@
   <component name="ArmoryWorkspace">
     <option name="isFirstStart" value="false" />
     <srcTreeState2>
-      <node name="acoustic-practical-task|com.intellij.ide.util.treeView.AbstractTreeUi$ElementNode|com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode|com.intellij.psi.impl.file.PsiJavaDirectoryImpl|">
+      <node name="rw-practical-task|com.intellij.ide.util.treeView.AbstractTreeUi$ElementNode|com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode|com.intellij.psi.impl.file.PsiJavaDirectoryImpl|">
         <node name="src|com.intellij.ide.util.treeView.AbstractTreeUi$ElementNode|com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode|com.intellij.psi.impl.file.PsiJavaDirectoryImpl|">
           <node name="test|com.intellij.ide.util.treeView.AbstractTreeUi$ElementNode|com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode|com.intellij.psi.impl.file.PsiJavaDirectoryImpl|">
             <node name="java|com.intellij.ide.util.treeView.AbstractTreeUi$ElementNode|com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode|com.intellij.psi.impl.file.PsiJavaDirectoryImpl|">
@@ -21,7 +21,7 @@
       <node name="External Libraries|com.intellij.ide.util.treeView.AbstractTreeUi$ElementNode|com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode|java.lang.String|" />
     </srcTreeState2>
     <nodeInfoState>
-      <child name="acoustic-practical-task">
+      <child name="rw-practical-task">
         <child name="src">
           <child name="test">
             <child name="java">
@@ -40,22 +40,22 @@
       <tree order="0" ws="0" width2="589">
         <expand>
           <item val="" />
-          <item val="acoustic-practical-task|" />
-          <item val="acoustic-practical-task|src|" />
-          <item val="acoustic-practical-task|src|test|" />
-          <item val="acoustic-practical-task|src|test|java|" />
-          <item val="acoustic-practical-task|src|test|java|com.mycompany|" />
-          <item val="acoustic-practical-task|src|test|java|com.mycompany|driver|" />
-          <item val="acoustic-practical-task|src|test|java|com.mycompany|driver|DriverManagerFactory|" />
-          <item val="acoustic-practical-task|src|test|java|com.mycompany|driver|FirefoxDriverFactory|" />
-          <item val="acoustic-practical-task|src|test|java|com.mycompany|driver|RemoteDriverFactory|" />
+          <item val="rw-practical-task|" />
+          <item val="rw-practical-task|src|" />
+          <item val="rw-practical-task|src|test|" />
+          <item val="rw-practical-task|src|test|java|" />
+          <item val="rw-practical-task|src|test|java|com.mycompany|" />
+          <item val="rw-practical-task|src|test|java|com.mycompany|driver|" />
+          <item val="rw-practical-task|src|test|java|com.mycompany|driver|DriverManagerFactory|" />
+          <item val="rw-practical-task|src|test|java|com.mycompany|driver|FirefoxDriverFactory|" />
+          <item val="rw-practical-task|src|test|java|com.mycompany|driver|RemoteDriverFactory|" />
           <item val="External Libraries|" />
         </expand>
         <select>
-          <item val="acoustic-practical-task|src|test|java|com.mycompany|driver|RemoteDriverFactory|configureDriver(DriverConfiguration):void|" />
+          <item val="rw-practical-task|src|test|java|com.mycompany|driver|RemoteDriverFactory|configureDriver(DriverConfiguration):void|" />
         </select>
         <roots>
-          <item val="acoustic-practical-task|" />
+          <item val="rw-practical-task|" />
           <item val="External Libraries|" />
           <item val="External Directories|" />
           <item val="Scratches and Consoles|" />
@@ -549,17 +549,17 @@
         <subPane>
           <expand>
             <path>
-              <item name="acoustic-practical-task" type="b2602c69:ProjectViewProjectNode" />
-              <item name="acoustic-practical-task" type="462c0819:PsiDirectoryNode" />
+              <item name="rw-practical-task" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rw-practical-task" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="acoustic-practical-task" type="b2602c69:ProjectViewProjectNode" />
-              <item name="acoustic-practical-task" type="462c0819:PsiDirectoryNode" />
+              <item name="rw-practical-task" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rw-practical-task" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="acoustic-practical-task" type="b2602c69:ProjectViewProjectNode" />
-              <item name="acoustic-practical-task" type="462c0819:PsiDirectoryNode" />
+              <item name="rw-practical-task" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rw-practical-task" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -692,8 +692,8 @@
       <recent name="com.mycompany.pageobjects" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\data\projects\acoustic-practical-task\src\docs" />
-      <recent name="C:\data\projects\acoustic-practical-task" />
+      <recent name="C:\data\projects\rw-practical-task\src\docs" />
+      <recent name="C:\data\projects\rw-practical-task" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -724,7 +724,7 @@
     <configuration name="registerNode" type="BatchConfigurationType" factoryName="Batch" temporary="true">
       <module name="rw-practical-task" />
       <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="WORKING_DIRECTORY" value="C:\data\projects\acoustic-practical-task\src\test\resources" />
+      <option name="WORKING_DIRECTORY" value="C:\data\projects\rw-practical-task\src\test\resources" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SCRIPT_NAME" value="registerNode.bat" />
       <option name="PARAMETERS" value="" />
@@ -735,7 +735,7 @@
     <configuration name="startGrid" type="BatchConfigurationType" factoryName="Batch" temporary="true">
       <module name="rw-practical-task" />
       <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="WORKING_DIRECTORY" value="C:\data\projects\acoustic-practical-task\src\test\resources" />
+      <option name="WORKING_DIRECTORY" value="C:\data\projects\rw-practical-task\src\test\resources" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SCRIPT_NAME" value="startGrid.bat" />
       <option name="PARAMETERS" value="" />
