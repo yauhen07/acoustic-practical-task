@@ -41,7 +41,7 @@ public class RWOperations
     @Step("Verify '{resultsPageOtherFilter.ruName}' filter working correctly")
     public void verifyOtherFilterResults(ResultsPageOtherFilter resultsPageOtherFilter)
     {
-        rwResultsPage.filterResultsUsingOtherFilter(resultsPageOtherFilter);
+        rwResultsPage.rwResultsOtherFilterPage.filterResultsUsingOtherFilter(resultsPageOtherFilter);
         for (SelenideElement element : rwResultsPage.collectListOfTrainsFilteredByOther())
         {
             assertFalse(element.getAttribute("class").endsWith("hidden"),
