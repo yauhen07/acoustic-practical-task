@@ -2,16 +2,16 @@ package com.mycompany.driver;
 
 public class DriverManager
 {
-    private static DefaultDriverFactory defaultDriverFactory;
+    private static DefaultDriverFactory driverFactory;
 
-    public static DefaultDriverFactory getDefaultDriverFactory()
+    public static DefaultDriverFactory getDriverFactory()
     {
-        return defaultDriverFactory;
+        return driverFactory;
     }
 
-    public static void setDefaultDriverFactory(DefaultDriverFactory defaultDriverFactory)
+    public static void setDriverFactory(DefaultDriverFactory driverFactory)
     {
-        DriverManager.defaultDriverFactory = defaultDriverFactory;
+        DriverManager.driverFactory = driverFactory;
     }
 
     public static DefaultDriverFactory setDriverFactory(DriverConfiguration driverConfiguration)
@@ -25,7 +25,7 @@ public class DriverManager
         {
             driverSelector(driverConfiguration);
         }
-        return defaultDriverFactory;
+        return driverFactory;
     }
 
     public static DefaultDriverFactory driverSelector(DriverConfiguration driverConfiguration)
@@ -33,14 +33,14 @@ public class DriverManager
         switch (driverConfiguration.getBrowserType())
         {
             case "CHROME":
-                defaultDriverFactory = new ChromeDriverFactory(driverConfiguration);
+                driverFactory = new ChromeDriverFactory(driverConfiguration);
                 break;
             case "FIREFOX":
-                defaultDriverFactory = new FirefoxDriverFactory(driverConfiguration);
+                driverFactory = new FirefoxDriverFactory(driverConfiguration);
                 break;
             default:
-                defaultDriverFactory = new ChromeDriverFactory(driverConfiguration);
+                driverFactory = new ChromeDriverFactory(driverConfiguration);
         }
-        return defaultDriverFactory;
+        return driverFactory;
     }
 }

@@ -13,7 +13,7 @@ public class RemoteDriverFactory extends DefaultDriverFactory
     @Override
     public void configureDriver()
     {
-        DefaultDriverFactory defaultDriverFactory;
+        defaultDriverConfiguration();
         StartGrid.startGrid();
         Configuration.remote = driverConfiguration.getHubUrl();
 

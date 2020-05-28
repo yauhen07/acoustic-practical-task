@@ -14,6 +14,7 @@ public class ChromeDriverFactory extends DefaultDriverFactory
     {
         defaultDriverConfiguration();
         Configuration.browser = BrowserType.CHROME.getBrowserType().toLowerCase();
+        Configuration.startMaximized = true;
         Configuration.browserVersion = driverConfiguration.getChromeVersion();
     }
 }
