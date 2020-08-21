@@ -1,16 +1,15 @@
 package com.mycompany.services;
 
 import com.codeborne.selenide.SelenideElement;
+import com.mycompany.filters.Filter;
 import com.mycompany.model.Train;
 import com.mycompany.pageobjects.RWResultsPage;
 import com.mycompany.pageobjects.RWSearchPage;
-import com.mycompany.pageobjects.ResultsPageOtherFilter;
+import io.qameta.allure.Step;
 
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
-
-import io.qameta.allure.Step;
 
 import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.page;
@@ -39,14 +38,14 @@ public class RWOperations
     }
 
     @Step("Verify '{resultsPageOtherFilter.ruName}' filter working correctly")
-    public void verifyOtherFilterResults(ResultsPageOtherFilter resultsPageOtherFilter)
+    public void verifyOtherFilterResults(Filter filter)
     {
-        rwResultsPage.rwResultsOtherFilterPage.filterResultsUsingOtherFilter(resultsPageOtherFilter);
-        for (SelenideElement element : rwResultsPage.collectListOfTrainsFilteredByOther())
+        rwResultsPage.rwResultsOtherFilterPage.filterResultsUsingOtherFilter(filter.getResultsPageOtherFilter());
+        for (SelenideElement element : rwResultsPage.collectListOfTrainsFilteredByOther(filter.getResultsPageOtherFilter()))
         {
             assertFalse(element.getAttribute("class").endsWith("hidden"),
-                "Not only trains with '" + resultsPageOtherFilter.ruName +
-                    "' option is displayed");
+                    "Not only trains with '" + filter.getResultsPageOtherFilter().ruName +
+                            "' option is displayed");
         }
     }
 
@@ -57,8 +56,8 @@ public class RWOperations
         for (int i = 0; i <= rwResultsPage.collectAllDisplayedTrainsNames().size() - 1; i++)
         {
             listOfTrainsOnResultsPage.add(new Train(rwResultsPage.collectAllDisplayedTrainsNames().texts().get(i),
-                rwResultsPage.collectAllDisplayedTrainsDeparture().texts().get(i),
-                rwResultsPage.collectAllDisplayedTrainsDuration().get(i).getAttribute("data-value")));
+                    rwResultsPage.collectAllDisplayedTrainsDeparture().texts().get(i),
+                    rwResultsPage.collectAllDisplayedTrainsDuration().get(i).getAttribute("data-value")));
         }
         return listOfTrainsOnResultsPage;
     }

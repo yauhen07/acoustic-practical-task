@@ -2,9 +2,9 @@ package com.mycompany.model;
 
 public class Train
 {
-    private String trainName;
-    private String departureTime;
-    private String inWayTimeMinutes;
+    private final String trainName;
+    private final String departureTime;
+    private final String inWayTimeMinutes;
 
     public Train(String trainName, String departureTime, String inWayTimeMinutes)
     {
