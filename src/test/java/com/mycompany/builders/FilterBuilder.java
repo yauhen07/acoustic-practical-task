@@ -3,14 +3,20 @@ package com.mycompany.builders;
 import com.mycompany.filters.Filter;
 import com.mycompany.pageobjects.ResultsPageOtherFilter;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class FilterBuilder implements Builder
 {
-    ResultsPageOtherFilter resultsPageOtherFilter;
+    //    ResultsPageOtherFilter resultsPageOtherFilter;
+    private List<ResultsPageOtherFilter> resultsPageOtherFilter;
 
     @Override
-    public void setOtherFilter(ResultsPageOtherFilter resultsPageOtherFilter)
+    public void setOtherFilter(ResultsPageOtherFilter withSits, ResultsPageOtherFilter eRegistration,
+                               ResultsPageOtherFilter placesForWheelchairUsers)
     {
-        this.resultsPageOtherFilter = resultsPageOtherFilter;
+        this.resultsPageOtherFilter = Arrays.asList(withSits, eRegistration, placesForWheelchairUsers);
     }
 
     @Override
@@ -27,6 +33,6 @@ public class FilterBuilder implements Builder
 
     public Filter getResult()
     {
-       return new Filter(resultsPageOtherFilter);
+        return new Filter(resultsPageOtherFilter);
     }
 }

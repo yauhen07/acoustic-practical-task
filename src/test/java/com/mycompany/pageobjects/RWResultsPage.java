@@ -11,6 +11,7 @@ import static com.codeborne.selenide.Selenide.page;
 public class RWResultsPage extends AbstractPage
 {
     private final By LIST_OF_TRAINS_FILTERED_BY_OTHER = By.xpath("//i[@class= 'svg-tag-er']/../../../../..");
+    private final By LIST_OF_ALL_DISPLAYED_TRAINS = By.xpath("//div[@class='sch-table__body js-sort-body']/div/div/..");
     private final By LIST_OF_DATE_FILTERS_ABOVE_TRAIN_SCHEDULE = By.xpath("//li[@class='sch-links__item "
             + "active']|//li[@class='sch-links__item']");
     private final By LIST_OF_ALL_DISPLAYED_TRAINS_NAMES = By.xpath("//span[@class = 'train-route']");
@@ -24,6 +25,11 @@ public class RWResultsPage extends AbstractPage
     public ElementsCollection collectListOfTrainsFilteredByOther(ResultsPageOtherFilter resultsPageOtherFilter)
     {
         return $$(By.xpath(resultsPageOtherFilter.getTagLocator()));
+    }
+
+    public ElementsCollection collectListOfAlDisplayedTrains(ResultsPageOtherFilter resultsPageOtherFilter)
+    {
+        return $$(LIST_OF_ALL_DISPLAYED_TRAINS);
     }
 
     @Step("Verify '{expectedCountOfDateFilters}' date filters above trains schedule")

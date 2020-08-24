@@ -2,7 +2,7 @@ package com.mycompany.pageobjects;
 
 public enum ResultsPageOtherFilter
 {
-    WITH_FREE_SITS("С наличием свободных мест", "//span[@data-filter-value = 'w_places']/../div", null),
+    WITH_FREE_SITS("С наличием свободных мест", "//span[@data-filter-value = 'w_places']/../div", "//div[@class = 'sch-table__t-name']"),
     E_REGISTRATION("Электронная регистрация", "//span[@data-filter-value = 'eregistration']/../div", "//i[@class= 'svg-tag-er']/../../../../.."),
     PLACES_FOR_WHEELCHAIR_USERS("Места для инвалидов-колясочников", "//span[@data-filter-value = 'special']/../div", "//i[@class= 'svg-tag-special']/../../../../..");
 

@@ -4,23 +4,26 @@ import com.mycompany.pageobjects.ResultsPageOtherFilter;
 import com.mycompany.pageobjects.ResultsPageTimeFilter;
 import com.mycompany.pageobjects.ResultsPageTrainTypeFilter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Filter
 {
-    private ResultsPageOtherFilter resultsPageOtherFilter;
+    private List<ResultsPageOtherFilter> resultsPageOtherFilter;
     private ResultsPageTimeFilter resultsPageTimeFilter;
     private ResultsPageTrainTypeFilter resultsPageTrainTypeFilter;
 
-    public Filter(ResultsPageOtherFilter resultsPageOtherFilter)
+    public Filter(List<ResultsPageOtherFilter> resultsPageOtherFilter)
     {
-        this.resultsPageOtherFilter = resultsPageOtherFilter;
+        this.resultsPageOtherFilter = (resultsPageOtherFilter);
     }
 
-    public ResultsPageOtherFilter getResultsPageOtherFilter()
+    public List<ResultsPageOtherFilter> getResultsPageOtherFilter()
     {
         return resultsPageOtherFilter;
     }
 
-    public void setResultsPageOtherFilter(ResultsPageOtherFilter resultsPageOtherFilter)
+    public void setResultsPageOtherFilter(List<ResultsPageOtherFilter> resultsPageOtherFilter)
     {
         this.resultsPageOtherFilter = resultsPageOtherFilter;
     }

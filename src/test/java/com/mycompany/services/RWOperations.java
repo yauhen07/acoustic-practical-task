@@ -5,6 +5,7 @@ import com.mycompany.filters.Filter;
 import com.mycompany.model.Train;
 import com.mycompany.pageobjects.RWResultsPage;
 import com.mycompany.pageobjects.RWSearchPage;
+import com.mycompany.pageobjects.ResultsPageOtherFilter;
 import io.qameta.allure.Step;
 
 import java.util.ArrayList;
@@ -40,12 +41,19 @@ public class RWOperations
     @Step("Verify '{resultsPageOtherFilter.ruName}' filter working correctly")
     public void verifyOtherFilterResults(Filter filter)
     {
-        rwResultsPage.rwResultsOtherFilterPage.filterResultsUsingOtherFilter(filter.getResultsPageOtherFilter());
-        for (SelenideElement element : rwResultsPage.collectListOfTrainsFilteredByOther(filter.getResultsPageOtherFilter()))
+        for (ResultsPageOtherFilter otherFilter : filter.getResultsPageOtherFilter())
         {
-            assertFalse(element.getAttribute("class").endsWith("hidden"),
-                    "Not only trains with '" + filter.getResultsPageOtherFilter().ruName +
-                            "' option is displayed");
+            if (otherFilter != null)
+            {
+                rwResultsPage.rwResultsOtherFilterPage.filterResultsUsingOtherFilter(otherFilter);
+
+                for (SelenideElement element : rwResultsPage.collectListOfTrainsFilteredByOther(otherFilter))
+                {
+                    assertFalse(element.getAttribute("class").endsWith("hidden"),
+                            "Not only trains with '" + otherFilter.ruName +
+                                    "' option is displayed");
+                }
+            }
         }
     }
 
